@@ -11,7 +11,7 @@ namespace Blog.Response
 {
     public class BaseResponse<T> : SimpleClient<T>, IBaseResponse<T> where T : class, new()
     {
-        public BaseResponse(ISqlSugarClient context) : base(context)
+        public BaseResponse(ISqlSugarClient context=null) : base(context)
         {
             //注入基类中的 Context 在此步骤之前请确定已经注册服务
             base.Context = DbScoped.Sugar;

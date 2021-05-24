@@ -1,3 +1,8 @@
+using Blog.IResponse;
+using Blog.IService;
+using Blog.Response;
+using Blog.Service;
+using BlogModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -36,10 +41,13 @@ namespace BlogSolution
             //注册sqlsugar服务  要下载 SqlSugar.IOC
             services.AddSqlSugar(new SqlSugar.IOC.IocConfig()
             {
-                ConnectionString= Configuration.GetConnectionString("sqlServer"),
-                DbType=SqlSugar.IOC.IocDbType.SqlServer,
-                IsAutoCloseConnection=true
+                ConnectionString = Configuration.GetConnectionString("sqlServer"),
+                DbType = SqlSugar.IOC.IocDbType.SqlServer,
+                IsAutoCloseConnection = true
             });
+
+            //注册自己编写服务 拓展方法
+            services.AddMySelfService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +70,23 @@ namespace BlogSolution
             {
                 endpoints.MapControllers();
             });
+        }
+    }
+
+  public  static class ExpIServiceCollection
+    {
+       public static IServiceCollection AddMySelfService(this  IServiceCollection service  )
+        {
+            service.AddScoped<IBaseResponse<Author>, BlogAuthorResponse>();
+            service.AddScoped<IBaseResponse<BlogNews>, BlogBlogNewsResponse>();
+            service.AddScoped<IBaseResponse<BlogTypeInfo>, BlogTypeInfoResponse>();
+
+            service.AddScoped<IAuthorService, BlogAuthorService>();
+            service.AddScoped<IBlogNewsServer, BlogNewsService>();
+            service.AddScoped<IBlogTypeInfoService, BlogTypeInfoService>();
+
+          
+            return service;
         }
     }
 }

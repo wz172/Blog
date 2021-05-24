@@ -146,3 +146,11 @@ D:\git 项目\Blog\BlogSolution\obj\Debug\net5.0\BlogSolution.dll
 D:\git 项目\Blog\BlogSolution\obj\Debug\net5.0\ref\BlogSolution.dll
 D:\git 项目\Blog\BlogSolution\obj\Debug\net5.0\BlogSolution.pdb
 D:\git 项目\Blog\BlogSolution\obj\Debug\net5.0\BlogSolution.genruntimeconfig.cache
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.IResponse.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.IService.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Response.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Service.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.IService.pdb
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Response.pdb
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Service.pdb
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.IResponse.pdb

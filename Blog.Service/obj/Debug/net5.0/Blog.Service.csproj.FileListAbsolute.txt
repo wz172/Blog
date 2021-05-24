@@ -21,3 +21,10 @@ D:\git 项目\Blog\Blog.Service\obj\Debug\net5.0\Blog.Service.csproj.CoreCompile
 D:\git 项目\Blog\Blog.Service\obj\Debug\net5.0\Blog.Service.dll
 D:\git 项目\Blog\Blog.Service\obj\Debug\net5.0\ref\Blog.Service.dll
 D:\git 项目\Blog\Blog.Service\obj\Debug\net5.0\Blog.Service.pdb
+D:\git 项目\Blog\Blog.Service\bin\Debug\net5.0\Blog.IResponse.dll
+D:\git 项目\Blog\Blog.Service\bin\Debug\net5.0\Blog.IService.dll
+D:\git 项目\Blog\Blog.Service\bin\Debug\net5.0\BlogModel.dll
+D:\git 项目\Blog\Blog.Service\bin\Debug\net5.0\Blog.IResponse.pdb
+D:\git 项目\Blog\Blog.Service\bin\Debug\net5.0\Blog.IService.pdb
+D:\git 项目\Blog\Blog.Service\bin\Debug\net5.0\BlogModel.pdb
+D:\git 项目\Blog\Blog.Service\obj\Debug\net5.0\Blog.Service.csproj.CopyComplete

@@ -33,6 +33,9 @@
     ".NETCoreApp,Version=v5.0": {
       "BlogSolution/1.0.0": {
         "dependencies": {
+          "Blog.IService": "1.0.0",
+          "Blog.Response": "1.0.0",
+          "Blog.Service": "1.0.0",
           "BlogModel": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -1788,6 +1791,51 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        }
+      },
+      "Blog.IResponse/1.0.0": {
+        "dependencies": {
+          "BlogModel": "1.0.0"
+        },
+        "runtime": {
+          "Blog.IResponse.dll": {}
+        },
+        "compile": {
+          "Blog.IResponse.dll": {}
+        }
+      },
+      "Blog.IService/1.0.0": {
+        "dependencies": {
+          "BlogModel": "1.0.0"
+        },
+        "runtime": {
+          "Blog.IService.dll": {}
+        },
+        "compile": {
+          "Blog.IService.dll": {}
+        }
+      },
+      "Blog.Response/1.0.0": {
+        "dependencies": {
+          "Blog.IResponse": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Response.dll": {}
+        },
+        "compile": {
+          "Blog.Response.dll": {}
+        }
+      },
+      "Blog.Service/1.0.0": {
+        "dependencies": {
+          "Blog.IResponse": "1.0.0",
+          "Blog.IService": "1.0.0"
+        },
+        "runtime": {
+          "Blog.Service.dll": {}
+        },
+        "compile": {
+          "Blog.Service.dll": {}
         }
       },
       "BlogModel/1.0.0": {
@@ -4466,6 +4514,26 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "Blog.IResponse/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.IService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Response/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Blog.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BlogModel/1.0.0": {
       "type": "project",

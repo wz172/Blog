@@ -2225,6 +2225,59 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Blog.IResponse/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BlogModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blog.IResponse.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blog.IResponse.dll": {}
+        }
+      },
+      "Blog.IService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "BlogModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blog.IService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blog.IService.dll": {}
+        }
+      },
+      "Blog.Response/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Blog.IResponse": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blog.Response.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blog.Response.dll": {}
+        }
+      },
+      "Blog.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Blog.IResponse": "1.0.0",
+          "Blog.IService": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Blog.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Blog.Service.dll": {}
+        }
+      },
       "BlogModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -7457,6 +7510,26 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Blog.IResponse/1.0.0": {
+      "type": "project",
+      "path": "../Blog.IResponse/Blog.IResponse.csproj",
+      "msbuildProject": "../Blog.IResponse/Blog.IResponse.csproj"
+    },
+    "Blog.IService/1.0.0": {
+      "type": "project",
+      "path": "../Blog.IService/Blog.IService.csproj",
+      "msbuildProject": "../Blog.IService/Blog.IService.csproj"
+    },
+    "Blog.Response/1.0.0": {
+      "type": "project",
+      "path": "../Blog.Response/Blog.Response.csproj",
+      "msbuildProject": "../Blog.Response/Blog.Response.csproj"
+    },
+    "Blog.Service/1.0.0": {
+      "type": "project",
+      "path": "../Blog.Service/Blog.Service.csproj",
+      "msbuildProject": "../Blog.Service/Blog.Service.csproj"
+    },
     "BlogModel/1.0.0": {
       "type": "project",
       "path": "../BlogModel/BlogModel.csproj",
@@ -7465,6 +7538,9 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Blog.IService >= 1.0.0",
+      "Blog.Response >= 1.0.0",
+      "Blog.Service >= 1.0.0",
       "BlogModel >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
@@ -7501,6 +7577,15 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\git 项目\\Blog\\Blog.IService\\Blog.IService.csproj": {
+              "projectPath": "D:\\git 项目\\Blog\\Blog.IService\\Blog.IService.csproj"
+            },
+            "D:\\git 项目\\Blog\\Blog.Response\\Blog.Response.csproj": {
+              "projectPath": "D:\\git 项目\\Blog\\Blog.Response\\Blog.Response.csproj"
+            },
+            "D:\\git 项目\\Blog\\Blog.Service\\Blog.Service.csproj": {
+              "projectPath": "D:\\git 项目\\Blog\\Blog.Service\\Blog.Service.csproj"
+            },
             "D:\\git 项目\\Blog\\BlogModel\\BlogModel.csproj": {
               "projectPath": "D:\\git 项目\\Blog\\BlogModel\\BlogModel.csproj"
             }
