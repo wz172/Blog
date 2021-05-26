@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Blog.IService\Blog.IService.csproj" />
+    <ProjectReference Include="..\Blog.Mapping\Blog.Mapping.csproj" />
     <ProjectReference Include="..\Blog.Response\Blog.Response.csproj" />
     <ProjectReference Include="..\Blog.Service\Blog.Service.csproj" />
     <ProjectReference Include="..\BlogModel\BlogModel.csproj" />

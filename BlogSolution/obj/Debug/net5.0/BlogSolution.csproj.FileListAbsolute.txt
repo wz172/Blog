@@ -154,3 +154,7 @@ D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.IService.pdb
 D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Response.pdb
 D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Service.pdb
 D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.IResponse.pdb
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\AutoMapper.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Mapping.dll
+D:\git 项目\Blog\BlogSolution\bin\Debug\net5.0\Blog.Mapping.pdb

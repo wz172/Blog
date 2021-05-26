@@ -1,0 +1,15 @@
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\Blog.Mapping.deps.json
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\Blog.Mapping.dll
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\ref\Blog.Mapping.dll
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\Blog.Mapping.pdb
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\BlogModel.dll
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\BlogModel.pdb
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.csprojAssemblyReference.cache
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.GeneratedMSBuildEditorConfig.editorconfig
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.AssemblyInfoInputs.cache
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.AssemblyInfo.cs
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.csproj.CoreCompileInputs.cache
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.csproj.CopyComplete
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.dll
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\ref\Blog.Mapping.dll
+D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.pdb

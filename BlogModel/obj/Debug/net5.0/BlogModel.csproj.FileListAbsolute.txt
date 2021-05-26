@@ -20,3 +20,4 @@ D:\git 项目\Blog\BlogModel\obj\Debug\net5.0\BlogModel.csproj.CoreCompileInputs
 D:\git 项目\Blog\BlogModel\obj\Debug\net5.0\BlogModel.dll
 D:\git 项目\Blog\BlogModel\obj\Debug\net5.0\ref\BlogModel.dll
 D:\git 项目\Blog\BlogModel\obj\Debug\net5.0\BlogModel.pdb
+D:\git 项目\Blog\BlogModel\obj\Debug\net5.0\BlogModel.csprojAssemblyReference.cache

@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Blog.Mapping;
 
 namespace BlogSolution
 {
@@ -48,6 +49,9 @@ namespace BlogSolution
 
             //注册自己编写服务 拓展方法
             services.AddMySelfService();
+
+            //注册automapper服务 扫描Profile 文件 有待优化
+            services.AddAutoMapper(System.Reflection.Assembly.Load("Blog.Mapping"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -84,8 +88,6 @@ namespace BlogSolution
             service.AddScoped<IAuthorService, BlogAuthorService>();
             service.AddScoped<IBlogNewsServer, BlogNewsService>();
             service.AddScoped<IBlogTypeInfoService, BlogTypeInfoService>();
-
-          
             return service;
         }
     }

@@ -16,9 +16,9 @@ namespace Blog.Response
             //注入基类中的 Context 在此步骤之前请确定已经注册服务
             base.Context = DbScoped.Sugar;
             //创建数据库
-            base.Context.DbMaintenance.CreateDatabase();
+            //base.Context.DbMaintenance.CreateDatabase();
             //创建所有的表
-            base.Context.CodeFirst.InitTables(typeof(BlogNews), typeof(Author), typeof(BlogTypeInfo));
+           // base.Context.CodeFirst.InitTables(typeof(BlogNews), typeof(Author), typeof(BlogTypeInfo));
         }
         public async Task<bool> AddAsync(T entity)
         {

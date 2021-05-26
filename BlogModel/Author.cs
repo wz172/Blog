@@ -7,7 +7,7 @@ using SqlSugar;
 
 namespace BlogModel
 {
-  public   class Author:BaseID
+  public class Author:BaseID
     {
         [SugarColumn(ColumnDataType ="nvarchar(32)")]
         public string   Name { get; set; }
