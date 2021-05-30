@@ -12,8 +12,5 @@ namespace Blog.Mapping.BlogTypeInfoDTO
         [SugarColumn(ColumnDataType = "nvarchar(32)")]
         public string TypeName { get; set; }
 
-        //类型不生成到数据库字段
-       //[SugarColumn(IsIgnore = true)]
-       // public BlogNews BlogNews { get; set; }
     }
 }

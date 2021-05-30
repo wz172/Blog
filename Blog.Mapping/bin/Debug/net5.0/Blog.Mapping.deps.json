@@ -9,6 +9,7 @@
       "Blog.Mapping/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "BlogCommon": "1.0.0",
           "BlogModel": "1.0.0"
         },
         "runtime": {
@@ -1412,6 +1413,11 @@
           }
         }
       },
+      "BlogCommon/1.0.0": {
+        "runtime": {
+          "BlogCommon.dll": {}
+        }
+      },
       "BlogModel/1.0.0": {
         "dependencies": {
           "SqlSugar.IOC": "1.5.0",
@@ -2366,6 +2372,11 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "BlogCommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "BlogModel/1.0.0": {
       "type": "project",

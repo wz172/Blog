@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.IService", "..\Blog.IS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Service", "..\Blog.Service\Blog.Service.csproj", "{8875355A-1103-4DD6-8F0E-5E78B0C0BE19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Mapping", "..\Blog.Mapping\Blog.Mapping.csproj", "{AC1751A9-A218-4459-B6E6-535835C1EAA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blog.Mapping", "..\Blog.Mapping\Blog.Mapping.csproj", "{AC1751A9-A218-4459-B6E6-535835C1EAA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogCommon", "..\BlogCommon\BlogCommon.csproj", "{6BB90CF1-5F89-41D1-B932-BAA84FE4B82B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{AC1751A9-A218-4459-B6E6-535835C1EAA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC1751A9-A218-4459-B6E6-535835C1EAA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC1751A9-A218-4459-B6E6-535835C1EAA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB90CF1-5F89-41D1-B932-BAA84FE4B82B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB90CF1-5F89-41D1-B932-BAA84FE4B82B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB90CF1-5F89-41D1-B932-BAA84FE4B82B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB90CF1-5F89-41D1-B932-BAA84FE4B82B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

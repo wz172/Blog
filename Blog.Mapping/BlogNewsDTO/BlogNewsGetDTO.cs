@@ -13,5 +13,6 @@ namespace Blog.Mapping.BlogNewsDTO
         [SugarColumn(IsIgnore = true)]
         public BlogTypeInfoGetDTO TypeInfo { get; set; }
         public string Time { get; set; }
+        public int ID { get; set; }
     }
 }

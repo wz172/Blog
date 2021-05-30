@@ -13,3 +13,5 @@ D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.csproj.CopyComplet
 D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.dll
 D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\ref\Blog.Mapping.dll
 D:\git 项目\Blog\Blog.Mapping\obj\Debug\net5.0\Blog.Mapping.pdb
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\BlogCommon.dll
+D:\git 项目\Blog\Blog.Mapping\bin\Debug\net5.0\BlogCommon.pdb

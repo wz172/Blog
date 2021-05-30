@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using BlogCommon;
 using BlogModel;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,26 @@ namespace Blog.Mapping.AuthorDTO
     {
         public BlogAuthorProfile()
         {
-            CreateMap<AuthorCreateDTO,Author>();
+            CreateMap<AuthorCreateDTO, Author>().
+                ForMember(
+                    dest => dest.UserPassword,
+                    original => original.MapFrom(src => Util.MD5Encrpy(src.UserPassword))
+                );
             CreateMap<Author, AuthorGetDTO>();
+
+            CreateMap<AuthorBaseDTO, Author>();
+            CreateMap<Author, AuthorBaseDTO>();
+
+            CreateMap<AuthorEditDTO, Author>()
+                .ForMember(
+                    dest => dest.UserPassword,
+                    original => original.MapFrom(src => Util.MD5Encrpy(src.UserPassword))
+                );
+            CreateMap<AuthorLogInDTO, Author>()
+                .ForMember(
+                    dest => dest.UserPassword,
+                    original => original.MapFrom(src => Util.MD5Encrpy(src.UserPassword))
+                );
         }
     }
 }

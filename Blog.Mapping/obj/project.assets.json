@@ -2150,6 +2150,16 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "BlogCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BlogCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BlogCommon.dll": {}
+        }
+      },
       "BlogModel/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -7291,6 +7301,11 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "BlogCommon/1.0.0": {
+      "type": "project",
+      "path": "../BlogCommon/BlogCommon.csproj",
+      "msbuildProject": "../BlogCommon/BlogCommon.csproj"
+    },
     "BlogModel/1.0.0": {
       "type": "project",
       "path": "../BlogModel/BlogModel.csproj",
@@ -7300,6 +7315,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "BlogCommon >= 1.0.0",
       "BlogModel >= 1.0.0"
     ]
   },
@@ -7335,6 +7351,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\git 项目\\Blog\\BlogCommon\\BlogCommon.csproj": {
+              "projectPath": "D:\\git 项目\\Blog\\BlogCommon\\BlogCommon.csproj"
+            },
             "D:\\git 项目\\Blog\\BlogModel\\BlogModel.csproj": {
               "projectPath": "D:\\git 项目\\Blog\\BlogModel\\BlogModel.csproj"
             }

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Blog.Mapping.BlogNewsDTO;
 using BlogModel;
+using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -36,10 +38,15 @@ namespace BlogSolution.Controllers
         }
 
         // GET api/<BlogNewsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}",Name = "GetNewsById")]
+        public async Task<IActionResult> GetNewsById([FromRoute]int id)
         {
-            return "value";
+            var data = await _blogNewsService.FindAsync(id);
+            if (data==null)
+            {
+                return NotFound($"没有找到ID={id}的博客文章。");
+            }
+            return Ok(_mapper.Map<BlogNewsGetDTO>(data));
         }
 
         // POST api/<BlogNewsController>
@@ -56,19 +63,51 @@ namespace BlogSolution.Controllers
             {
                 return BadRequest();
             }
-            return NoContent();
+            return Created("GetNewsById",createData.ID);
         }
 
         // PUT api/<BlogNewsController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public async Task<IActionResult> UpdataBlogNewsByID([FromRoute]int id, [FromBody] BlogNewsUpdataDTO blogDto)
         {
+            var blogNewsDataFromResponse = await _blogNewsService.FindAsync(id);
+            if (blogNewsDataFromResponse==null)
+            {
+                return NotFound($"要更新的资源ID={id}不存在");
+            }
+            _mapper.Map(blogDto, blogNewsDataFromResponse);
+            await _blogNewsService.EditAsync(blogNewsDataFromResponse);
+            return Ok();
         }
 
-        // DELETE api/<BlogNewsController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> PatchBlogNewsByIdAsync([FromRoute] int id, [FromBody] JsonPatchDocument <BlogNewsUpdataDTO> blogDto)
         {
+            var blogNewsDataFromResponse = await _blogNewsService.FindAsync(id);
+            if (blogNewsDataFromResponse == null)
+            {
+                return NotFound($"要更新的资源ID={id}不存在");
+            }
+            var blogNewsDataFromDto = _mapper.Map<BlogNewsUpdataDTO>(blogNewsDataFromResponse);
+
+            blogDto.ApplyTo(blogNewsDataFromDto);
+             _mapper.Map(blogNewsDataFromDto, blogNewsDataFromResponse);
+            await _blogNewsService.EditAsync(blogNewsDataFromResponse);
+            return Ok();
+        }
+
+        // DELETE api  [Authorize(Roles = "admin", AuthenticationSchemes = "Bearer")]
+        [HttpDelete("{id}")]
+        [Authorize(Roles ="root",AuthenticationSchemes ="Bearer")]
+        public async Task<IActionResult> DeleteBlogNewsByID([FromRoute]int id)
+        {
+            var deleEntity = await _blogNewsService.FindAsync(id);
+            if (deleEntity==null)
+            {
+                return NotFound($"要删除的ID={id}文章不存在！");
+            }
+            await _blogNewsService.DeletAsync(deleEntity);
+            return NoContent();
         }
     }
 }

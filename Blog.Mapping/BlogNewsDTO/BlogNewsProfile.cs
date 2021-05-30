@@ -18,6 +18,12 @@ namespace Blog.Mapping.BlogNewsDTO
                 orignal => orignal.MapFrom(src => src.Time.ToLongTimeString ())
                 ) ;
             CreateMap<BlogNewsCreateDTO, BlogNews>();
+
+            CreateMap<BlogNewsUpdataDTO, BlogNews>();
+            CreateMap<BlogNews, BlogNewsUpdataDTO>();
+
+            CreateMap<BlogNewsBaseDTO, BlogNews>();
+            CreateMap<BlogNews, BlogNewsBaseDTO>();
         }
     }
 }

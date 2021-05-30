@@ -30,9 +30,9 @@ namespace Blog.Response
             await base.DeleteAsync(entity);
         }
 
-        public Task<bool> EditAsync(T entity)
+        public async Task<bool> EditAsync(T entity)
         {
-            throw new NotImplementedException();
+            return await base.UpdateAsync(entity);
         }
 
         public virtual async Task<T> FindAsync(int id)

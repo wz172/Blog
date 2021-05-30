@@ -1,4 +1,5 @@
-﻿using SqlSugar;
+﻿using Blog.Mapping.BlogNewsDTO;
+using SqlSugar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,5 @@ namespace Blog.Mapping
         public string Name { get; set; }
         [SugarColumn(ColumnDataType = "nvarchar(32)")]
         public string UserName { get; set; }
-      
-        //[SugarColumn(IsIgnore = true)]
-        //public IEnumerable<BlogNews> blogNews { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blog.Mapping.BlogNewsDTO
 {
-  public    class BlogNewsCreateDTO:BlogNewsBaseDTO
+    public class BlogNewsCreateDTO : BlogNewsBaseDTO
     {
         public DateTime Time { get; set; }
     }

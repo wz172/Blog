@@ -17,6 +17,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Blog.Mapping;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace BlogSolution
 {
@@ -32,11 +34,39 @@ namespace BlogSolution
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //注入JWT认证
+           services.AddJwtService(Configuration);
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "BlogSolution", Version = "v1" });
+
+                #region Awagger 使用授权组件
+
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Name= "Authorization",
+                    Description = "直接在下拉框中输入Bearer {token}",
+                    BearerFormat = "JWT",
+                    Scheme = "Bearer"
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement {
+                    {
+                        new OpenApiSecurityScheme{
+                            Reference=new  OpenApiReference{
+                                Type=ReferenceType.SecurityScheme,
+                                Id="Bearer"
+                            }
+
+                        },new string[]{ }
+                    }
+                });
+
+                #endregion
             });
 
             //注册sqlsugar服务  要下载 SqlSugar.IOC
@@ -52,6 +82,8 @@ namespace BlogSolution
 
             //注册automapper服务 扫描Profile 文件 有待优化
             services.AddAutoMapper(System.Reflection.Assembly.Load("Blog.Mapping"));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +100,9 @@ namespace BlogSolution
 
             app.UseRouting();
 
+            //你是谁
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -77,9 +112,9 @@ namespace BlogSolution
         }
     }
 
-  public  static class ExpIServiceCollection
+    public static class ExpIServiceCollection
     {
-       public static IServiceCollection AddMySelfService(this  IServiceCollection service  )
+        public static IServiceCollection AddMySelfService(this IServiceCollection service)
         {
             service.AddScoped<IBaseResponse<Author>, BlogAuthorResponse>();
             service.AddScoped<IBaseResponse<BlogNews>, BlogBlogNewsResponse>();
@@ -89,6 +124,30 @@ namespace BlogSolution
             service.AddScoped<IBlogNewsServer, BlogNewsService>();
             service.AddScoped<IBlogTypeInfoService, BlogTypeInfoService>();
             return service;
+        }
+
+        public static IServiceCollection AddJwtService(this IServiceCollection services, IConfiguration Configuration)
+        {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
+              options =>
+              {
+                  var configKeyBytes = System.Text.Encoding.UTF8.GetBytes(Configuration["SignatureKey:loginKey"]);
+                  options.TokenValidationParameters = new TokenValidationParameters()
+                  {
+                      ValidateIssuer = true,
+                      ValidIssuer = Configuration["SignatureKey:Issuer"],
+
+                      ValidateAudience = true,
+                      ValidAudience = Configuration["SignatureKey:Audience"],
+
+                      ValidateLifetime = true,
+
+                      IssuerSigningKey = new SymmetricSecurityKey(configKeyBytes)
+
+                  };
+              }
+              );
+            return services;
         }
     }
 }

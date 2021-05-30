@@ -8,5 +8,6 @@ namespace Blog.Mapping.BlogTypeInfoDTO
 {
    public class BlogTypeInfoCreateDTO :BlogTypeInfoBaseDTO
     {
+        public BlogNewsDTO.BlogNewsCreateDTO BlogNews { get; set; }
     }
 }
